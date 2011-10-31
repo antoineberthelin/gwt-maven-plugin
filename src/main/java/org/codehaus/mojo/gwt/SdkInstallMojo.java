@@ -31,7 +31,7 @@ import org.apache.maven.plugin.MojoFailureException;
 
 /**
  * Install a GWT (home built) SDK in local repository
- * 
+ *
  * @author <a href="mailto:nicolas@apache.org">Nicolas De Loof</a>
  * @goal sdkInstall
  */
@@ -65,7 +65,7 @@ public class SdkInstallMojo
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see org.apache.maven.plugin.Mojo#execute()
      */
     public void execute()

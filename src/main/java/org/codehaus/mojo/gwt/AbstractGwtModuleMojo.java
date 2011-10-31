@@ -81,7 +81,7 @@ public abstract class AbstractGwtModuleMojo
         String[] modules = getModules();
         return ArrayUtils.isEmpty( modules )? new ArrayList<String>(0) : Arrays.asList( modules );
     }
-    
+
     /**
      * Return the configured modules or scan the project source/resources folder to find them
      *

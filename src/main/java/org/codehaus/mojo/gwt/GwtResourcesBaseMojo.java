@@ -33,10 +33,10 @@ import org.codehaus.plexus.util.DirectoryScanner;
 /**
  * Collect GWT java source code and module descriptor to be added as resources. Common
  * functionality for different implementations GwtResourcesMojo and GwtSourcesJarMojo
- * 
+ *
  * @author <a href="mailto:nicolas@apache.org">Nicolas De Loof</a>
  * @author <a href="mailto:vlads@pyx4j.com">Vlad Skarzhevskyy</a>
- * 
+ *
  */
 abstract class GwtResourcesBaseMojo
     extends AbstractGwtModuleMojo

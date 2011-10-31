@@ -28,7 +28,7 @@ import org.apache.maven.plugin.testing.stubs.MavenProjectStub;
 import org.apache.maven.project.MavenProject;
 
 /**
- * 
+ *
  * @author Robert Scholte
  *
  */
@@ -37,7 +37,7 @@ public abstract class AbstractGwtMojoTestCase
 {
 
     /**
-     * 
+     *
      * @param pDir path to the pomDirectory, relative to the baseDir of this project
      * @return the GwtMojo corresponding with the goal
      * @throws Exception

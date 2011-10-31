@@ -43,11 +43,11 @@ public class Hello
          *  Asycn method invocations to check generated code matches the expected signatures.
          *  Generation mismatch will be detected during compile phase by the java compiler
          */
-        
+
         service.returnsVoid( "test", new VoidAsyncCallBack() );
-        
+
         service.returnsPrimitive( new String[0], new IntegerAsyncCallBack() );
-        
+
         service.returnsGenerics( new ArrayList<String>(), new CollectionAsynCallBack() );
     }
 

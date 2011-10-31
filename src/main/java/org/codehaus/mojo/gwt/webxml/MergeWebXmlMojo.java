@@ -61,24 +61,24 @@ public class MergeWebXmlMojo
     /**
      * Location on filesystem where merged web.xml will be created. The maven-war-plugin must be configured to use this
      * path as <a href="http://maven.apache.org/plugins/maven-war-plugin/war-mojo.html#webXml"> webXml</a> parameter
-     * 
+     *
      * @parameter default-value="${project.build.directory}/web.xml"
      */
     private File mergedWebXml;
-    
+
     /**
-     * 
+     *
      * @parameter default-value="false"
      * @since 2.1.0-1
-     */    
+     */
     private boolean scanRemoteServiceRelativePathAnnotation;
-    
+
     /**
      * @parameter
      * @since 2.1.0-1
      */
     private Map<String,String> packageNamePerModule;
-    
+
     /**
      * @component
      * @required
@@ -109,7 +109,7 @@ public class MergeWebXmlMojo
             FileUtils.copyFile( getWebXml(), mergedWebXml );
 
             Set<ServletDescriptor> servlets = new LinkedHashSet<ServletDescriptor>();
-            
+
 
             for ( String module : getModules() )
             {
@@ -155,7 +155,7 @@ public class MergeWebXmlMojo
             throw new MojoExecutionException( "Unable to merge web.xml", e );
         }
     }
-    
+
     private ClassLoader getAnnotationSearchClassLoader()
         throws ClasspathBuilderException, MalformedURLException
     {

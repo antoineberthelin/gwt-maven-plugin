@@ -31,6 +31,6 @@ public interface GwtModuleReader
 {
     GwtModule readModule( String name )
 		throws GwtModuleReaderException;
-    
+
     List<String> getGwtModules();
 }

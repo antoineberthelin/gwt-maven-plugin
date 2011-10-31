@@ -5,10 +5,10 @@ import com.google.gwt.junit.client.GWTTestCase;
 /**
  * Failing GwtTestCase <br/>
  * read : http://mojo.codehaus.org/gwt-maven-plugin/user-guide/testing.html pour plus d'informations
- * 
+ *
  * @author salvador
  * @see GwtFailTestSuite
- * 
+ *
  */
 public class FailTestGwt
     extends GWTTestCase

@@ -4,8 +4,8 @@
  Nicolas de Loof
  Olivier Lamy
  ------
- 2011-01-14 
- 
+ 2011-01-14
+
 ~~ Licensed to the Apache Software Foundation (ASF) under one
 ~~ or more contributor license agreements.  See the NOTICE file
 ~~ distributed with this work for additional information
@@ -36,16 +36,16 @@ Using the Archetype
 * Using the Archetype
 
  Use it as you would any other Maven archetype to create a template/stub project.
- 
+
  Due to an archetype maven project issue {{{http://jira.codehaus.org/browse/ARCHETYPE-351}ARCHETYPE-351}}
  you must add the archetype repository used via the following parameter
- 
+
 +--
  -DarchetypeRepository=repo1.maven.org
-+-- 
++--
 
  The full command line until fix of archetype issue is :
-  
+
 +--
  mvn archetype:generate \
    -DarchetypeRepository=repo1.maven.org \
@@ -70,8 +70,8 @@ Using the Archetype
 
   It uses M2Eclipse for classpath management and Google Eclipse Plugin for nice GWT
   support inside Eclipse.
-  
+
   Note before importing your project you must configure M2eclipse as it.
   See box : Goals to run on project import.
-  
-[../images/user-guide/eclipse-m2-conf.jpg]  
+
+[../images/user-guide/eclipse-m2-conf.jpg]

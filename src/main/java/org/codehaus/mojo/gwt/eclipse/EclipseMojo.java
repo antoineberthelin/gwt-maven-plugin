@@ -90,7 +90,7 @@ public class EclipseMojo
 
     /**
      * Location of the hosted-mode web application structure.
-     * 
+     *
      * @parameter default-value="${project.build.directory}/${project.build.finalName}"
      */
     private File hostedWebapp;
@@ -120,7 +120,7 @@ public class EclipseMojo
      * Set GWT shell protocol/host whitelist.
      * <p>
      * Can be set from command line using '-Dgwt.whitelist=...'
-     * 
+     *
      * @parameter expression="${gwt.whitelist}"
      */
     private String whitelist;
@@ -129,7 +129,7 @@ public class EclipseMojo
      * Set GWT shell protocol/host blacklist.
      * <p>
      * Can be set from command line using '-Dgwt.blacklist=...'
-     * 
+     *
      * @parameter expression="${gwt.blacklist}"
      */
     private String blacklist;
@@ -138,7 +138,7 @@ public class EclipseMojo
      * Set GWT shell bindAddress.
      * <p>
      * Can be set from command line using '-Dgwt.bindAddress=...'
-     * 
+     *
      * @parameter expression="${gwt.bindAddress}"
      */
     private String bindAddress;
@@ -147,7 +147,7 @@ public class EclipseMojo
      * Setup a launch configuration for using the Google Eclipse Plugin. This is the recommended setup, as the home-made
      * launch configuration has many limitations. This parameter is only for backward compatibility, the standard lauch
      * configuration template will be removed in a future release.
-     * 
+     *
      * @parameter default-value="true" expression="${use.google.eclipse.plugin}"
      */
     private boolean useGoogleEclispePlugin;
@@ -302,7 +302,7 @@ public class EclipseMojo
         {
             throw new MojoExecutionException( e.getMessage(), e );
         }
-        
+
     }
 
 }

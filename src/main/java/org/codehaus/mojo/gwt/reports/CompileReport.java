@@ -63,15 +63,15 @@ public class CompileReport
      * @parameter default-value="${project.build.directory}/extra"
      */
     private File extra;
-    
+
     /**
      * Doxia Site Renderer component.
      *
      * @component
      * @since 2.1.0-1
      */
-    protected Renderer siteRenderer;  
-    
+    protected Renderer siteRenderer;
+
     /**
      * The output directory for the report. Note that this parameter is only evaluated if the goal is run directly from
      * the command line. If the goal is run indirectly as part of a site generation, the output directory configured in
@@ -80,9 +80,9 @@ public class CompileReport
      * @parameter default-value="${project.reporting.outputDirectory}"
      * @required
      * @since 2.1.0-1
-     */    
+     */
     protected File outputDirectory;
-    
+
     /**
      * The Maven Project.
      *
@@ -91,21 +91,21 @@ public class CompileReport
      * @readonly
      * @since 2.1.0-1
      */
-    protected MavenProject project;    
-   
-    
+    protected MavenProject project;
+
+
     /**
      * @component
      * @since 2.1.0-1
      */
-    protected ClasspathBuilder classpathBuilder;    
-    
+    protected ClasspathBuilder classpathBuilder;
+
     /**
      * @parameter default-value="false" expression="${gwt.compilerReport.skip}"
      * @since 2.1.0-1
      */
-    private boolean skip;    
-    
+    private boolean skip;
+
     /**
      * Internationalization component.
      *
@@ -191,8 +191,8 @@ public class CompileReport
     protected MavenProject getProject()
     {
         return project;
-    }    
-   
+    }
+
     /**
      * @see org.apache.maven.reporting.AbstractMavenReport#executeReport(java.util.Locale)
      */
@@ -200,13 +200,13 @@ public class CompileReport
     protected void executeReport( Locale locale )
         throws MavenReportException
     {
-        
+
         if ( skip )
         {
             getLog().info( "Compiler Report is skipped" );
             return;
-        }        
-        
+        }
+
         if ( !reportingOutputDirectory.exists() )
         {
             reportingOutputDirectory.mkdirs();
@@ -217,7 +217,7 @@ public class CompileReport
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setBasedir( extra );
         scanner.setIncludes( new String[] { "**/soycReport/compile-report/index.html" } );
-        
+
         if (extra.exists())
         {
             scanner.scan();
@@ -225,15 +225,15 @@ public class CompileReport
         {
             compileReports = false;
         }
-        
+
         if (!compileReports || scanner.getIncludedFiles().length == 0 )
         {
             getLog().warn( "No compile reports found, did you compile with compileReport option set ?" );
             compileReports = false;
         }
-        
+
         String[] includeFiles = compileReports ? scanner.getIncludedFiles() : new String[0];
-        
+
         for ( String path : includeFiles )
         {
             String module = path.substring( 0, path.indexOf( File.separatorChar ) );
@@ -248,7 +248,7 @@ public class CompileReport
                 throw new MavenReportException( e.getMessage(), e );
             }
         }
-        
+
         try
         {
 

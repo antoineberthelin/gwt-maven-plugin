@@ -34,7 +34,7 @@ import org.codehaus.plexus.util.cli.StreamConsumer;
 
 /**
  * Creates CSS interfaces for css files.
- * Will use the utility tool provided in gwt sdk which create a corresponding Java interface for accessing 
+ * Will use the utility tool provided in gwt sdk which create a corresponding Java interface for accessing
  * the classnames used in the file.
  * @goal css
  * @author Stale Undheim <undheim@corporater.com>
@@ -46,14 +46,14 @@ public class CSSMojo
 {
     /**
      * List of resourceBundles that should be used to generate CSS interfaces.
-     * 
+     *
      * @parameter
      */
     private String[] cssFiles;
 
     /**
      * Shortcut for a single cssFile
-     * 
+     *
      * @parameter
      */
     private String cssFile;
@@ -91,7 +91,7 @@ public class CSSMojo
                         getLog().info( "Generating " + javaOutput + " with typeName " + typeName );
                         ensureTargetPackageExists( getGenerateDirectory(), typeName );
 
-                        
+
                         try
                         {
                             new JavaCommand( "com.google.gwt.resources.css.InterfaceGenerator" )
@@ -103,7 +103,7 @@ public class CSSMojo
                             .arg( candidate.getAbsolutePath() )
                             .withinClasspath( getGwtDevJar() )
                             .withinClasspath( getGwtUserJar() )
-                            .execute();                            
+                            .execute();
                             final FileWriter outputWriter = new FileWriter( javaOutput );
                             outputWriter.write( content.toString() );
                             outputWriter.close();
@@ -116,7 +116,7 @@ public class CSSMojo
                         break;
                     }
                 }
-                
+
                 if ( content.length() == 0 )
                 {
                     throw new MojoExecutionException( "cannot generate java source from file " + file + "." );

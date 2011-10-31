@@ -149,7 +149,7 @@ public class GwtModule
     }
 
     /**
-     * 
+     *
      * @param set
      * @param modules
      * @throws MojoExecutionException

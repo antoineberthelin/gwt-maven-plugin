@@ -167,7 +167,7 @@ public class RunMojo
      * @since 1.2
      */
     private Map<String, String> systemProperties;
-    
+
     /**
      * Copies the contents of warSourceDirectory to hostedWebapp.
      * <p>
@@ -176,66 +176,66 @@ public class RunMojo
      * @parameter default-value="false" expression="${gwt.copyWebapp}"
      * @since 2.1.0-1
      */
-    private boolean copyWebapp;    
+    private boolean copyWebapp;
 
     /**
      * set the appengine sdk to use
      * <p>
-     * Artifact will be downloaded with groupId : {@link #appEngineGroupId} 
+     * Artifact will be downloaded with groupId : {@link #appEngineGroupId}
      * and artifactId {@link #appEngineArtifactId}
      * <p>
      * @parameter default-value="1.3.8" expression="${gwt.appEngineVersion}"
      * @since 2.1.0-1
      */
     private String appEngineVersion;
-    
+
     /**
      * <p>
      * List of {@link Pattern} jars to exclude from the classPath when running
      * dev mode
      * </p>
-     * @parameter 
+     * @parameter
      * @since 2.1.0-1
      */
     private List<String> runClasspathExcludes;
-    
+
     /**
      * <p>
      * Location to find appengine sdk or to unzip downloaded one see {@link #appEngineVersion}
      * </p>
      * @parameter default-value="${project.build.directory}/appengine-sdk/" expression="${gwt.appEngineHome}"
      * @since 2.1.0-1
-     */    
+     */
     private File appEngineHome;
-    
+
     /**
      * <p>
      * groupId to download appengine sdk from maven repo
      * </p>
      * @parameter default-value="com.google.appengine" expression="${gwt.appEngineGroupId}"
      * @since 2.1.0-1
-     */    
+     */
     private String appEngineGroupId;
-    
+
     /**
      * <p>
      * groupId to download appengine sdk from maven repo
      * </p>
      * @parameter default-value="appengine-java-sdk" expression="${gwt.appEngineArtifactId}"
      * @since 2.1.0-1
-     */    
-    private String appEngineArtifactId;    
-    
-    
+     */
+    private String appEngineArtifactId;
+
+
     /**
      * To look up Archiver/UnArchiver implementations
      * @since 2.1.0-1
      * @component
      */
     protected ArchiverManager archiverManager;
-    
-    
-    
+
+
+
      /**
      * Set GWT shell bindAddress.
      * <p>
@@ -243,7 +243,7 @@ public class RunMojo
      * @since 2.1.0-1
      * @parameter expression="${gwt.bindAddress}"
      */
-    private String bindAddress;    
+    private String bindAddress;
 
     public String getRunTarget()
     {
@@ -436,7 +436,7 @@ public class RunMojo
             }
 
         }
-        // TODO refactor this a little 
+        // TODO refactor this a little
         if ( isAppEngine )
         {
             File appEngineToolsApi = new File( appEngineHome, "/lib/appengine-tools-api.jar" );
@@ -513,7 +513,7 @@ public class RunMojo
                 }
             }
         }
-    }  
+    }
 
     private void setupExplodedWar()
         throws MojoExecutionException
@@ -531,8 +531,8 @@ public class RunMojo
             {
                 throw new MojoExecutionException( "Failed to copy warSourceDirectory to " + hostedWebapp, e );
             }
-        }        
-        
+        }
+
         File classes = new File( hostedWebapp, "WEB-INF/classes" );
         classes.mkdirs();
 

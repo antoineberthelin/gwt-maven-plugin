@@ -29,7 +29,7 @@ import org.codehaus.plexus.util.FileUtils;
 
 /**
  * Cleanup the webapp directory for GWT module compilation output
- * 
+ *
  * @author <a href="mailto:nicolas@apache.org">Nicolas De Loof</a>
  * @goal clean
  */
@@ -39,7 +39,7 @@ public class GwtCleanMojo
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see org.apache.maven.plugin.Mojo#execute()
      */
     public void execute()

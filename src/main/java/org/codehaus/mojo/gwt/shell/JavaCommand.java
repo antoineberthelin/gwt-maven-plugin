@@ -54,17 +54,17 @@ public class JavaCommand
     private Properties env = new Properties();
 
     private Collection<File> classPathFiles;
-    
+
     private List<String> jvmArgs;
-    
+
     private String jvm;
-    
+
     private Log log;
-    
+
     private int timeOut;
-    
+
     private List<ClassPathProcessor> classPathProcessors;
-    
+
     /**
      * A plexus-util StreamConsumer to redirect messages to plugin log
      */
@@ -86,10 +86,10 @@ public class JavaCommand
             log.error( line );
         }
     };
-    
+
     /**
-     * 
-     * 
+     *
+     *
      */
     public JavaCommand( JavaCommandRequest javaCommandRequest)
     {
@@ -263,7 +263,7 @@ public class JavaCommand
         log.debug( "use jvm " + jvm );
         return jvm;
     }
-    
+
     public void withinClasspathFirst( File oophmJar )
     {
         classpath.add( 0, oophmJar );

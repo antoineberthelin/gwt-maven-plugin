@@ -40,7 +40,7 @@ import org.codehaus.plexus.logging.AbstractLogEnabled;
 
 /**
  * Util to consolidate classpath manipulation stuff in one place.
- * 
+ *
  * @author ccollins
  * @version $Id$
  * @plexus.component role="org.codehaus.mojo.gwt.ClasspathBuilder"
@@ -60,7 +60,7 @@ public class ClasspathBuilder
      * @param artifacts the project artifacts (all scopes)
      * @param scope artifact scope to use
      * @return file collection for classpath
-     * @throws MojoExecutionException 
+     * @throws MojoExecutionException
      */
     @SuppressWarnings( "unchecked" )
     public Collection<File> buildClasspathList( final MavenProject project, final String scope,

@@ -33,12 +33,12 @@ public interface HelloService
 {
 	public static class Result<T extends Serializable> implements Serializable
 	{
-		
+
 	}
-	
+
     void voidMethod(Result<String> result);
-    
+
     Result<String> resultMethod();
-    
+
     void doubleNesting(Result<Result<String>> result);
 }

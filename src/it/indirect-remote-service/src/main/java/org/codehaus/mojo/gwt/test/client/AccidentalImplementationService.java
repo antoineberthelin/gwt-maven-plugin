@@ -20,7 +20,7 @@ package org.codehaus.mojo.gwt.test.client;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 
-public class AccidentalImplementationService 
+public class AccidentalImplementationService
     implements RemoteService
 {
 }

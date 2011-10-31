@@ -27,11 +27,11 @@
 
 Processing Annotation @RemoteServiceRelativePath to generate web.xml content
 
-  Because life is too short to manually write xml content for servlets in web.xml files (and not 
+  Because life is too short to manually write xml content for servlets in web.xml files (and not
   everybody uses servlet 3.0), you can now automatically merge your web.xml with generated servlet lines
   for classes annotated with @RemoteServiceRelativePath.
   This feature has been added in {{{../mergewebxml-mojo.html}mergewebxml mojo}}
-  
+
 +--
 <project>
   [...]
@@ -55,7 +55,7 @@ Processing Annotation @RemoteServiceRelativePath to generate web.xml content
             <goals>
               <goal>mergewebxml</goal>
             </goals>
-          </execution>          
+          </execution>
         </executions>
       </plugin>
       [...]
@@ -63,15 +63,14 @@ Processing Annotation @RemoteServiceRelativePath to generate web.xml content
   </build>
   [...]
 </project>
-+--   
++--
 
   As the the annotation processing need the compiled classes you need to bind the mojo to at least compile phase.
-  The other mojo parameters are : 
-  
+  The other mojo parameters are :
+
   * {{{../mergewebxml-mojo.html#scanRemoteServiceRelativePathAnnotation}scanRemoteServiceRelativePathAnnotation}} : to activate this feature
-  
+
   * {{{../mergewebxml-mojo.html#packageNamePerModule}packageNamePerModule}} : to configure per module the root package to scan.
   Here you can use the "module name" ( org/codehaus/mojo/gwt/test/Hello.gwt.xml -> org.codehaus.mojo.gwt.test.Hello) or the rename-to value
   coming from your module name.
-  
-  
+

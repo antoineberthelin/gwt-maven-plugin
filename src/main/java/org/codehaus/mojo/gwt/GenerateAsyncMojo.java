@@ -45,7 +45,7 @@ import com.thoughtworks.qdox.model.Type;
 
 /**
  * Goal which generate Asyn interface.
- * 
+ *
  * @goal generateAsync
  * @phase generate-sources
  * @requiresDependencyResolution compile
@@ -72,14 +72,14 @@ public class GenerateAsyncMojo
 
     /**
      * Pattern for GWT service interface
-     * 
+     *
      * @parameter default-value="**\/*Service.java"
      */
     private String servicePattern;
 
     /**
      * Return a com.google.gwt.http.client.Request on async interface to allow cancellation.
-     * 
+     *
      * @parameter default-value="false"
      */
     private boolean returnRequest;
@@ -88,21 +88,21 @@ public class GenerateAsyncMojo
      * A (MessageFormat) Pattern to get the GWT-RPC servlet URL based on service interface name. For example to
      * "{0}.rpc" if you want to map GWT-RPC calls to "*.rpc" in web.xml, for example when using Spring dispatch servlet
      * to handle RPC requests.
-     * 
+     *
      * @parameter default-value="{0}" expression="${gwt.rpcPattern}"
      */
     private String rpcPattern;
 
     /**
      * Stop the build on error
-     * 
+     *
      * @parameter default-value="true" expression="${maven.gwt.failOnError}"
      */
     private boolean failOnError;
 
     /**
      * Pattern for GWT service interface
-     * 
+     *
      * @parameter default-value="false" expression="${generateAsync.force}"
      */
     private boolean force;
