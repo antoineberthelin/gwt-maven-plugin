@@ -96,7 +96,7 @@ reactor/                                     (aggregating parent project)
   about <<Maven>>-modules.
 
 
-  
+
 * Necessary Steps
 
 ** Subproject: <<<jar>>>

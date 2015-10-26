@@ -43,7 +43,7 @@ import org.codehaus.plexus.util.cli.StreamConsumer;
 /**
  * Support running GWT SDK Tools as forked JVM with classpath set according to project source/resource directories and
  * dependencies.
- * 
+ *
  * @author ccollins
  * @author cooper
  * @author willpugh

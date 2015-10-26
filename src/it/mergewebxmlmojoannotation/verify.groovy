@@ -24,7 +24,7 @@ content = new File(basedir, 'target/web.xml').text;
 assert content.contains( '<servlet-name>org.codehaus.mojo.gwt.test.server.HelloRemoteServlet/hello/HelloService</servlet-name>' );
 assert content.contains( '<servlet-class>org.codehaus.mojo.gwt.test.server.HelloRemoteServlet</servlet-class>' );
 assert content.contains( '<url-pattern>/hello/HelloService</url-pattern>' );
-  
+
 assert content.contains( '<servlet-name>org.codehaus.mojo.foo.NiceServlet/Name</servlet-name>' );
 assert content.contains( '<servlet-class>org.codehaus.mojo.foo.NiceServlet</servlet-class>' );
 assert content.contains( '<url-pattern>/NiceServlet</url-pattern>' );

@@ -31,7 +31,7 @@ import org.codehaus.plexus.util.FileUtils;
  * Copy GWT java source code and module descriptor as resources in the build
  * outputDirectory. Alternative to declaring a &lt;resource&gt; in the POM with finer
  * filtering as the module descriptor is read to detect sources to be copied.
- * 
+ *
  * @author <a href="mailto:nicolas@apache.org">Nicolas De Loof</a>
  * @goal resources
  * @phase process-resources
@@ -48,7 +48,7 @@ public class GwtResourcesMojo
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see org.apache.maven.plugin.Mojo#execute()
      */
     public void execute()

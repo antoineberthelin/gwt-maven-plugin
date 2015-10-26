@@ -162,7 +162,7 @@ public abstract class AbstractGwtMojo
      * @parameter default-value="false" expression="${gwt.inplace}"
      */
     private boolean inplace;
-    
+
     /**
      * The forked command line will use gwt sdk jars first in classpath.
      * see issue http://code.google.com/p/google-web-toolkit/issues/detail?id=5290

@@ -68,15 +68,15 @@ public class SoycReport
      * @parameter default-value="${project.build.directory}/extra"
      */
     private File extra;
-    
+
     /**
      * Doxia Site Renderer component.
      *
      * @component
      * @since 2.1.0-1
      */
-    protected Renderer siteRenderer;  
-    
+    protected Renderer siteRenderer;
+
     /**
      * The output directory for the report. Note that this parameter is only evaluated if the goal is run directly from
      * the command line. If the goal is run indirectly as part of a site generation, the output directory configured in
@@ -85,9 +85,9 @@ public class SoycReport
      * @parameter default-value="${project.reporting.outputDirectory}"
      * @required
      * @since 2.1.0-1
-     */    
+     */
     protected File outputDirectory;
-    
+
     /**
      * The Maven Project.
      *
@@ -96,35 +96,35 @@ public class SoycReport
      * @readonly
      * @since 2.1.0-1
      */
-    protected MavenProject project;    
-    
+    protected MavenProject project;
+
     /**
      * @parameter default-value="${plugin.artifactMap}"
      * @required
      * @readonly
      * @since 2.1.0-1
      */
-    private Map<String, Artifact> pluginArtifacts;    
-    
+    private Map<String, Artifact> pluginArtifacts;
+
     /**
      * @component
      * @since 2.1.0-1
      */
-    protected ClasspathBuilder classpathBuilder;    
-    
+    protected ClasspathBuilder classpathBuilder;
+
     /**
      * @parameter default-value="false" expression="${gwt.soycReport.skip}"
      * @since 2.1.0-1
      */
     private boolean skip;
-    
+
     /**
      * Internationalization component.
      *
      * @component
      * @since 2.1.0-1
      */
-    protected I18N i18n;    
+    protected I18N i18n;
 
     /**
      * {@inheritDoc}
@@ -222,11 +222,11 @@ public class SoycReport
             getLog().info( "Soyc Report is skipped" );
             return;
         }
-        
+
         DirectoryScanner scanner = new DirectoryScanner();
         scanner.setBasedir( extra );
         scanner.setIncludes( new String[] { "**/soycReport/stories0.xml.gz" } );
-        
+
         boolean soycRawReport = true;
 
         if ( extra.exists() )
@@ -243,7 +243,7 @@ public class SoycReport
             getLog().warn( "No SOYC raw report found, did you compile with soyc option set ?" );
             soycRawReport = false;
         }
-        
+
         GwtDevHelper gwtDevHelper = new GwtDevHelper( pluginArtifacts, project, getLog(), AbstractGwtMojo.GWT_GROUP_ID );
         String[] includeFiles = soycRawReport ? scanner.getIncludedFiles() : new String[0];
 
@@ -271,7 +271,7 @@ public class SoycReport
                                                "soyc", false, i18n, locale ).render();
             }
         }
-        
+
         try
         {
 
@@ -299,6 +299,6 @@ public class SoycReport
     protected String getI18nString( Locale locale, String key )
     {
         return i18n.getString( "compile-report", locale, key );
-    }    
-    
+    }
+
 }

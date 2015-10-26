@@ -36,7 +36,7 @@ public class DebugMojo
 
     /**
      * Port to listen for debugger connection on.
-     * 
+     *
      * @parameter default-value="8000" expression="${gwt.debugPort}"
      */
     private int debugPort;
@@ -50,14 +50,14 @@ public class DebugMojo
 
     /**
      * Attach to the debugger application at the specified debugPort.
-     * 
+     *
      * @parameter default-value="false" expression="${attachDebugger}"
      */
     private boolean attachDebugger;
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see org.codehaus.mojo.gwt.shell.RunMojo#getFileName()
      */
     @Override
@@ -70,7 +70,7 @@ public class DebugMojo
      * Override extraJVMArgs to append JVM debugger option
      * <p>
      * {@inheritDoc}
-     * 
+     *
      * @see org.codehaus.mojo.gwt.shell.AbstractGwtShellMojo#getExtraJvmArgs()
      */
     @Override

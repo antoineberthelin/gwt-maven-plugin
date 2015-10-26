@@ -48,17 +48,17 @@ public class JavaCommandRequest
     private Properties env = new Properties();
 
     private Collection<File> classPathFiles;
-    
+
     private List<String> jvmArgs;
-    
+
     private String jvm;
-    
+
     private Log log;
-    
+
     private int timeOut;
-    
+
     private List<ClassPathProcessor> classPathProcessors;
-    
+
     public JavaCommandRequest()
     {
         // no op

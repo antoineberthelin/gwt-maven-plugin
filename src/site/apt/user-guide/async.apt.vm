@@ -3,8 +3,8 @@
  ------
  Nicolas de Loof
  ------
- 2010-11-26 
- 
+ 2010-11-26
+
 ~~ Licensed to the Apache Software Foundation (ASF) under one
 ~~ or more contributor license agreements.  See the NOTICE file
 ~~ distributed with this work for additional information
@@ -23,7 +23,7 @@
 ~~ under the License.
 
 ~~ NOTE: For help with the syntax of this file, see:
-~~ http://maven.apache.org/doxia/references/apt-format.html 
+~~ http://maven.apache.org/doxia/references/apt-format.html
 
 Generate Async interfaces for GWT-RPC services
 

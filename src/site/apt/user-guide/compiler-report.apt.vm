@@ -27,8 +27,8 @@
 
 Easy Integration of the GWT Compile Report in your Maven Site
 
-  You must activate the {{{../compile-mojo.html}compiler mojo}} option <<<compileReport>>> 
- 
+  You must activate the {{{../compile-mojo.html}compiler mojo}} option <<<compileReport>>>
+
 +--
 <project>
   [...]
@@ -62,10 +62,10 @@ Easy Integration of the GWT Compile Report in your Maven Site
         </reportSets>
       </plugin>
     </plugins>
-  </reporting>  
+  </reporting>
 </project>
-+--  
++--
 
-  
 
-  
+
+

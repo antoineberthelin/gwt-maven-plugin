@@ -76,6 +76,6 @@ public class ServletAnnotationFinderTest
         ServletDescriptor desc = servletDescriptors.iterator().next();
         assertEquals( HelloRemoteServlet.class.getName(), desc.getClassName() );
         assertEquals( "/foo/HelloService", desc.getPath() );
-    }  
+    }
 
 }

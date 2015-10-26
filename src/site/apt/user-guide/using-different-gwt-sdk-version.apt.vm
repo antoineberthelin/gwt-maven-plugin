@@ -30,7 +30,7 @@ Using different GWT SDK Version
   Currently the mojo use and has been tested with following gwt sdk version ${gwtVersion}.
   This version is defined in the plugin dependencies, so if you want an other (newer) version you must change
   your pom as it
-  
+
 +--
 <project>
   <properties>
@@ -62,4 +62,4 @@ Using different GWT SDK Version
   </build>
   [...]
 </project>
-+--  
++--

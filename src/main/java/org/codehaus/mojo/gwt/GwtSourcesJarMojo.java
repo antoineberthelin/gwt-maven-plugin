@@ -34,7 +34,7 @@ import org.codehaus.plexus.archiver.jar.JarArchiver;
 /**
  * Add GWT java source code and module descriptor as resources to project jar. Alternative
  * to gwt:resources for better Eclipse projects synchronization.
- * 
+ *
  * @author <a href="mailto:vlads@pyx4j.com">Vlad Skarzhevskyy</a>
  * @goal source-jar
  * @phase package
@@ -45,7 +45,7 @@ public class GwtSourcesJarMojo
 
     /**
      * Name of the generated JAR.
-     * 
+     *
      * @parameter alias="jarName" expression="${jar.finalName}"
      *            default-value="${project.build.finalName}"
      * @required
@@ -61,7 +61,7 @@ public class GwtSourcesJarMojo
 
     /**
      * The Jar archiver.
-     * 
+     *
      * @component role="org.codehaus.plexus.archiver.Archiver" roleHint="jar"
      */
     private JarArchiver jarArchiver;
@@ -69,14 +69,14 @@ public class GwtSourcesJarMojo
     /**
      * The archive configuration to use. See <a
      * href="http://maven.apache.org/shared/maven-archiver/index.html">Maven Archiver Reference</a>.
-     * 
+     *
      * @parameter
      */
     private final MavenArchiveConfiguration archive = new MavenArchiveConfiguration();
 
     /**
      * {@inheritDoc}
-     * 
+     *
      * @see org.apache.maven.plugin.Mojo#execute()
      */
     public void execute()

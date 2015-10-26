@@ -5,7 +5,7 @@ import org.apache.maven.plugin.MojoFailureException;
 import org.apache.maven.plugin.testing.AbstractMojoTestCase;
 
 /**
- * 
+ *
  * @author Robert Scholte
  *
  */

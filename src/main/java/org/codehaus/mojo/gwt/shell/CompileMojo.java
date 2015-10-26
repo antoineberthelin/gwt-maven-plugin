@@ -74,11 +74,11 @@ public class CompileMojo
     /**
      * On GWT 1.6+, number of parallel processes used to compile GWT premutations. Defaults to
      * platform available processors number.
-     * 
+     *
      * <p>
      * Can be unset from command line using '-Dgwt.compiler.localWorkers=n'.
      * </p>
-     * 
+     *
      * @parameter expression="${gwt.compiler.localWorkers}"
      */
     private int localWorkers;
@@ -153,7 +153,7 @@ public class CompileMojo
      * @parameter
      */
     private File workDir;
-    
+
     /**
      * add -extra parameter to the compiler command line
      * <p>
@@ -163,7 +163,7 @@ public class CompileMojo
      * @since 2.1.0-1
      */
     private boolean extraParam;
-    
+
     /**
      * add -compileReport parameter to the compiler command line
      * <p>
@@ -171,9 +171,9 @@ public class CompileMojo
      * </p>
      * @parameter default-value="false" expression="${gwt.compiler.compileReport}"
      * @since 2.1.0-1
-     */    
+     */
     private boolean compileReport;
-    
+
     /**
      * add -optimize parameter to the compiler command line the value must be between 0 and 9
      * by default -1 so no arg to the compiler
@@ -182,9 +182,9 @@ public class CompileMojo
      * </p>
      * @parameter default-value="-1" expression="${gwt.compiler.optimizationLevel}"
      * @since 2.1.0-1
-     */    
-    private int optimizationLevel;    
-    
+     */
+    private int optimizationLevel;
+
     /**
      * add -XsoycDetailed parameter to the compiler command line
      * <p>
@@ -192,20 +192,20 @@ public class CompileMojo
      * </p>
      * @parameter default-value="false" expression="${gwt.compiler.soycDetailed}"
      * @since 2.1.0-1
-     */    
-    private boolean soycDetailed;    
-    
-    
+     */
+    private boolean soycDetailed;
+
+
     /**
      * add -strict parameter to the compiler command line
-     * 
+     *
      * <p>
      * Can be set from command line using '-Dgwt.compiler.strict=true'.
      * </p>
      * @parameter default-value="false" expression="${gwt.compiler.strict}"
      * @since 2.1.0-1
-     */    
-    private boolean strict;     
+     */
+    private boolean strict;
 
     public void doExecute( )
         throws MojoExecutionException, MojoFailureException

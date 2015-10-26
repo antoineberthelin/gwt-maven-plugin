@@ -18,7 +18,7 @@ package org.codehaus.mojo.gwt.test;
  * specific language governing permissions and limitations
  * under the License.
  */
- 
+
 import java.io.File;
 import java.util.List;
 

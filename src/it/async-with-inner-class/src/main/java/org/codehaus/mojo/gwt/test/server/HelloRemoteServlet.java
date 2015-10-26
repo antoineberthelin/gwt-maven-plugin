@@ -36,14 +36,14 @@ public class HelloRemoteServlet
     implements HelloService
 {
 	public void voidMethod(Result<String> result) {
-		
+
 	}
-    
+
 	public Result<String> resultMethod() {
     	return null;
     }
-    
+
 	public void doubleNesting(Result<Result<String>> result) {
-    	
+
     }
 }

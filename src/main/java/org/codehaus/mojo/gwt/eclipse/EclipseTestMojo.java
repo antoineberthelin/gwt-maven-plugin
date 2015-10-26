@@ -121,7 +121,7 @@ public class EclipseTestMojo
         context.put( "out", testOutputDirectory.getAbsolutePath().substring( basedir + 1 ) );
         context.put( "extraJvmArgs", getExtraJvmArgs() );
         context.put( "project", eclipseUtil.getProjectName( getProject() ) );
-        
+
 
         try
         {
